@@ -10,13 +10,16 @@
   
 </body>
 <script>
+  window.c = 4
   const obj = {
     c:3
   }
   function add(a,b) {
     return a + b + this.c
   }
-  console.log(call(add,obj,1,2));
+  console.log(call(add,null,1,2));
+  
+  console.log(apply(add,obj,[1,2]));
   
 </script>
 </html>
